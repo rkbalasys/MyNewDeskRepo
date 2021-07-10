@@ -3,7 +3,7 @@ name: "Terraform Provisioning"
 on:
   push: 
      branches:
-       - rkbalasys-patch-1
+       - master
 
 jobs:
   terraform:
