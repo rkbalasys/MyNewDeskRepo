@@ -11,8 +11,8 @@ jobs:
     name: "Terraform"
     runs-on: rhel8-latest
     env:
-      AWS_ACCESS_KEY_ID: "AKIAY7PUU36FPFUDNW4G"
-      AWS_SECRET_ACCESS_KEY: "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"
+      AWS_ACCESS_KEY_ID: ""
+      AWS_SECRET_ACCESS_KEY: ""
       AWS_REGION: 'ap-southeast-1'
 
     steps:
