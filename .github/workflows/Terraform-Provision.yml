@@ -1,0 +1,43 @@
+name: "Terraform Provisioning"
+
+on:
+  push: 
+     branches:
+       - rkbalasys-patch-1
+
+jobs:
+  terraform:
+    name: "Terraform"
+    runs-on: rhel8-latest
+    env:
+      AWS_ACCESS_KEY_ID: ""
+      AWS_SECRET_ACCESS_KEY: ""
+      AWS_REGION: 'ap-southeast-1'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        id: init
+        run: terraform init
+
+      - name: Terraform Plan
+        id: plan
+        if: github.event_name == 'push'
+        run: terraform plan 
+        continue-on-error: true
+      
+      - name: Terraform Plan Status
+        if: steps.plan.outcome == 'failure'
+        run: exit 1
+
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/rkbalasys-patch-1' && github.event_name == 'push'
+        run: terraform apply -auto-approve
+        
+
+
