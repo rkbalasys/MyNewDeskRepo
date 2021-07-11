@@ -9,15 +9,6 @@ terraform {
         region = "ap-southeast-1"
     }
 }
-   data "terraform_remote_state" "network" {
-      backend = "s3"
-      config  = {
-      bucket  = "aws-tech-guru"
-      key     = "terraform.tfstate"
-      region  = "ap-southeast-1"
-  }
-}
-
 
 
 provider "aws" {
