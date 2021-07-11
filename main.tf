@@ -8,7 +8,7 @@ terraform {
         key    = "aws-tech-guru-nonprod.tfstate"
         region = "ap-southeast-1"
     }
-   
+}
    data "terraform_remote_state" "network" {
       backend = "s3"
       config  = {
@@ -18,7 +18,7 @@ terraform {
   }
 }
 
-}
+
 
 provider "aws" {
   region = "ap-southeast-1"
