@@ -5,8 +5,7 @@ terraform {
     backend "s3" {
 
         bucket = "aws-tech-guru"
-    #    key    = "aws-tech-guru-nonprod.tfstate"
-        key    = "terraform.tfvars"
+        key    = "aws-tech-guru-nonprod.tfstate"
         region = "ap-southeast-1"
      
     }
