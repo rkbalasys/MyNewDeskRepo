@@ -1,11 +1,11 @@
 data "aws_ami" "myami" {
     most_recent = true
-    owners      = ["amazon"]
+    owners      = ["redhat"]
     
     
     filter {
         name    = "name"
-        values  = ["amzn2-ami-hvm*"]
+        values  = ["rhel-ami-hvm*"]
     }
 }
 
