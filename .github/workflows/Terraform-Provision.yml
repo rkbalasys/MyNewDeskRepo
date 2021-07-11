@@ -2,7 +2,7 @@ name: "Terraform Provisioning EC2"
 
 on:
 
-  pull: 
+  push: 
      branches:
        - master
 
