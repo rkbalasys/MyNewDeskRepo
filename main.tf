@@ -1,8 +1,6 @@
 terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "3.49.0"
+
+   required_version = "3.49.0"
 
     backend "s3" {
 
@@ -11,8 +9,6 @@ terraform {
         region = "ap-southeast-1"
      
     }
-    }
-  }
 }
 
 provider "aws" {
