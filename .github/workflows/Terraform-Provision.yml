@@ -9,7 +9,7 @@ on:
 jobs:
   terraform:
     name: "Terraform"
-  #  runs-on: rhel8-latest
+    runs-on: rhel8-latest
     env:
       AWS_ACCESS_KEY_ID: ""
       AWS_SECRET_ACCESS_KEY: ""
