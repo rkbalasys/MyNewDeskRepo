@@ -9,10 +9,10 @@ on:
 jobs:
   terraform:
     name: "Terraform"
-    runs-on: ubuntu-latest
+    runs-on: redhat-latest
     env:
-      AWS_ACCESS_KEY_ID: ""
-      AWS_SECRET_ACCESS_KEY: ""
+      AWS_ACCESS_KEY_ID: "AKIAY7PUU36FFA5FHSUB"
+      AWS_SECRET_ACCESS_KEY: "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"
       AWS_REGION: 'ap-southeast-1'
 
     steps:
